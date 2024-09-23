@@ -52,7 +52,7 @@ const questions = [[
 
 // FUNCTIONS
 // TODO: Create a function to write README file
-
+const writeToFile = (response) => fs.writeFile('README.md', generateMarkdown(response), (err) => err? console.log(err) : console.log("Success!"))
 
 
 
