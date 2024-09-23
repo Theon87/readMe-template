@@ -58,14 +58,12 @@ const writeToFile = (response) => fs.writeFile('README.md', generateMarkdown(res
 
 // USER INTERACTIONS
 // TODO: Create a function to initialize app
-
-
-
-
-// function init() {
-//     console.log(colors.rainbow("Complete these questions to create a README file"))
-//     return (writeToFile);
-// };
+const init = () => {
+    console.log (colors.rainbow("Enter informaiton to create a README file"));
+    inquirer
+    .prompt(questions)
+    .then(writeToFile);
+}
 
 // INITIALIZATIONS
 // Function call to initialize app
