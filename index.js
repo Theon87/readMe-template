@@ -56,15 +56,16 @@ const generateMarkdown = (response) => {
     return `# ${response.title}
 
 ## Description
-
 ${response.description}
+
+The template used to build this file was found at the following location: Professional Readme Guide. Professional README Guide | The Full-Stack Blog. (n.d.). https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [How to Contribute](#contributing)
+- [How to Contribute](#how-to-contribute)
 - [Tests](#tests)
 - [Questions](#questions)
 
@@ -90,10 +91,7 @@ ${response.tests}
 
 ##  Questions
 
-${response.questions}
-
-## Template Citation
-Professional Readme Guide. Professional README Guide | The Full-Stack Blog. (n.d.). https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide`;
+${response.questions}`;
 };
 
 const writeToFile = (response) => fs.writeFile('README.md', generateMarkdown(response), (err) => err? console.log(err) : console.log("Success!"))
