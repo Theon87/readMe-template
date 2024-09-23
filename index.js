@@ -1,13 +1,30 @@
+// DEPENDENCIES
 // TODO: Include packages needed for this application
+import inquirer from "inquirer";
+import colors from "colors";
+import fs from "fs";
 
+// DATA
 // TODO: Create an array of questions for user input
-const questions = [];
 
+
+// FUNCTIONS
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
+
+
+
+// USER INTERACTIONS
 // TODO: Create a function to initialize app
-function init() {}
 
+
+
+
+// function init() {
+//     console.log(colors.rainbow("Complete these questions to create a README file"))
+//     return (writeToFile);
+// };
+
+// INITIALIZATIONS
 // Function call to initialize app
 init();
