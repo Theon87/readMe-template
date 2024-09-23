@@ -52,9 +52,51 @@ const questions = [[
 
 // FUNCTIONS
 // TODO: Create a function to write README file
+const generateMarkdown = (response) => {
+    return `# ${response.title}
+
+## Description
+
+${response.description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [How to Contribute](#credits)
+- [Tests](#credits)
+- [Questions](#credits)
+
+## Installation
+
+${response.installation}
+
+## Usage
+
+${response.usage}
+
+## License
+
+${response.license}
+
+## How to Contribute
+
+${response.contributions}
+
+## Tests
+
+${response.tests}
+
+##  Questions
+
+${response.questions}
+
+## Template Citation
+Professional Readme Guide. Professional README Guide | The Full-Stack Blog. (n.d.). https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide`;
+};
+
 const writeToFile = (response) => fs.writeFile('README.md', generateMarkdown(response), (err) => err? console.log(err) : console.log("Success!"))
-
-
 
 // USER INTERACTIONS
 // TODO: Create a function to initialize app
