@@ -6,7 +6,7 @@ import fs from "fs";
 
 // DATA
 // TODO: Create an array of questions for user input
-const questions = [[
+const questions = [
     {
         type: "input",
         message: colors.magenta("What is the title of your repo"),
@@ -48,10 +48,10 @@ const questions = [[
         message: colors.magenta("Where do you want messages to be sent?"),
         name: "questions"
     }
-]];
+]
 
-// FUNCTIONS
-// TODO: Create a function to write README file
+// // FUNCTIONS
+// // TODO: Create a function to write README file
 const generateMarkdown = (response) => {
     return `# ${response.title}
 
@@ -64,9 +64,9 @@ ${response.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [How to Contribute](#credits)
-- [Tests](#credits)
-- [Questions](#credits)
+- [How to Contribute](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -82,7 +82,7 @@ ${response.license}
 
 ## How to Contribute
 
-${response.contributions}
+${response.contributing}
 
 ## Tests
 
@@ -101,7 +101,7 @@ const writeToFile = (response) => fs.writeFile('README.md', generateMarkdown(res
 // USER INTERACTIONS
 // TODO: Create a function to initialize app
 const init = () => {
-    console.log (colors.rainbow("Enter informaiton to create a README file"));
+    console.log (colors.rainbow("Enter your informaiton to create a README file."))
     inquirer
     .prompt(questions)
     .then(writeToFile);
