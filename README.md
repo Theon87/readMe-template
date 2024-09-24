@@ -22,6 +22,8 @@ Install using the npm i to add needed packages.
 
 Use this app to generate consistent README files which meet minimum standards.
 
+Watch this video: https://drive.google.com/file/d/13_6lwEhlhg7xXQ--MEmX_LCMFGZAIbst/view
+
 ## License
 
 This application is covered under the MIT license.
