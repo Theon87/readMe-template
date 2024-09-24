@@ -32,7 +32,7 @@ const questions = [
         type: "list",
         message: colors.magenta("Which license did you use?"),
         name: "license",
-        choices: ["MIT", "Creative Commons", "GNU"]
+        choices: ["MIT", "Creative Commons", "GNU", ""]
     },
     {
         type: "input",

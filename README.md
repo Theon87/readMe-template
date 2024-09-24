@@ -1,7 +1,7 @@
-# cccccccccc
+# cccccccc
 
 ## Description
-cccccccc
+ccccccccc
 
 function renderLicenseBadge(license) {
   if (license === `MIT`) {
@@ -31,7 +31,7 @@ ccccccccccc
 
 ## Usage
 
-cccccccccc
+ccccccccccc
 
 ## License
 
@@ -54,8 +54,8 @@ ccccccccccc
 
 ## Tests
 
-cccccccccc
+cccccccccccc
 
 ## Questions
 
-cccccccccccc
+ccccccccccccc
