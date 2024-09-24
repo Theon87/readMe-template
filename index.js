@@ -46,8 +46,18 @@ const questions = [
     },
     {
         type: "input",
-        message: colors.magenta("Where do you want messages to be sent?"),
+        message: colors.magenta("How to reach out with additional questions?"),
         name: "questions"
+    },
+    {
+        type: "input",
+        message: colors.magenta("What is your GitHub URL?"),
+        name: "githubUrl"
+    },
+    {
+        type: "input",
+        message: colors.magenta("What is your email address?"),
+        name: "email"
     }
 ]
 
@@ -70,9 +80,3 @@ init();
 
 // WHEN I choose a license for my application from a list of options
 // THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-
-// WHEN I enter my GitHub username
-// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-
-// WHEN I enter my email address
-// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions

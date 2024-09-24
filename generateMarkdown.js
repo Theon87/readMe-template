@@ -40,7 +40,6 @@ function generateMarkdown(response) {
 ## Description
 ${response.description}
 
-${renderLicenseBadge}
 The template used to build this file was found at the following location: Professional Readme Guide. Professional README Guide | The Full-Stack Blog. (n.d.). https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
 ## Table of Contents
@@ -63,7 +62,6 @@ ${response.usage}
 ## License
 
 This application is covered under the ${response.license} license.
-${renderLicenseLink}
 
 ## Contributing
 
@@ -76,6 +74,10 @@ ${response.tests}
 ## Questions
 
 ${response.questions}
+
+- [GitHub](#${response.githubUrl})
+
+- [Email](#${response.email})
 `;
 }
 
