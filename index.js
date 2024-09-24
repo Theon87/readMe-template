@@ -3,6 +3,7 @@
 import inquirer from "inquirer";
 import colors from "colors";
 import fs from "fs";
+import generateMarkdown from "./generateMarkdown.js";
 
 // DATA
 // TODO: Create an array of questions for user input
@@ -31,7 +32,7 @@ const questions = [
         type: "list",
         message: colors.magenta("Which license did you use?"),
         name: "license",
-        choices: ["MIT", "Creative Commons license family", "Microsoft Public License"]
+        choices: ["MIT", "Creative Commons", "GNU"]
     },
     {
         type: "input",
@@ -52,49 +53,7 @@ const questions = [
 
 // // FUNCTIONS
 // // TODO: Create a function to write README file
-const generateMarkdown = (response) => {
-    return `# ${response.title}
-
-## Description
-${response.description}
-
-The template used to build this file was found at the following location: Professional Readme Guide. Professional README Guide | The Full-Stack Blog. (n.d.). https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [How to Contribute](#how-to-contribute)
-- [Tests](#tests)
-- [Questions](#questions)
-
-## Installation
-
-${response.installation}
-
-## Usage
-
-${response.usage}
-
-## License
-
-${response.license}
-
-## How to Contribute
-
-${response.contributing}
-
-## Tests
-
-${response.tests}
-
-##  Questions
-
-${response.questions}`;
-};
-
-const writeToFile = (response) => fs.writeFile('README.md', generateMarkdown(response), (err) => err? console.log(err) : console.log("Success!"))
+const writeToFile = (response) => fs.writeFile("README.md", generateMarkdown(response), (err) => err? console.log(err) : console.log("Success!"))
 
 // USER INTERACTIONS
 // TODO: Create a function to initialize app
@@ -108,3 +67,12 @@ const init = () => {
 // INITIALIZATIONS
 // Function call to initialize app
 init();
+
+// WHEN I choose a license for my application from a list of options
+// THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+
+// WHEN I enter my GitHub username
+// THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
+
+// WHEN I enter my email address
+// THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
